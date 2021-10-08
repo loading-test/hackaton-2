@@ -5,7 +5,7 @@ const MainContainer = () => {
   return (
     <div className="container">
       <div>
-        <p>Text...</p>
+        <p>Text....</p>
       </div>
       <div className="container mt-5">
         <div className="row">
