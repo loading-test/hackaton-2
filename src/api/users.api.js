@@ -90,24 +90,15 @@ const users = [
   }
 ];
 
-<<<<<<< HEAD
-const fetchUsersAll = () => 
-  new Promise(function(resolve) {
-=======
+
 const fetchUsersAll = () =>
   new Promise(function (resolve) {
->>>>>>> 4396b3eab9faf46dcb3f92e839b1967d301bbe01
     window.setInterval(() => {
       resolve(users);
     }, 2000);
   });
 
-<<<<<<< HEAD
-
-const getById = (id) => 
-=======
 const getById = (id) =>
->>>>>>> 4396b3eab9faf46dcb3f92e839b1967d301bbe01
   new Promise((resolve) => {
     window.setInterval(function () {
       resolve(users.find((user) => user.id === id));

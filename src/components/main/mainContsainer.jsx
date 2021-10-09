@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./mainContainer.css";
 import Preloader from "../../utils/preloader";
+import { Link } from "react-router-dom";
 
 const MainContainer = ({ users }) => {
   if (users) {
@@ -26,10 +27,13 @@ const MainContainer = ({ users }) => {
                         <h5 className="card-title">{item.name}</h5>
                         <p className="card-text">{`${item.age} года`}</p>
                         <p className="about">{item.aboutMe}</p>
+
                         <div className="link-btn-card">
-                          <button className="btn btn-outline-secondary">
-                            Открыть
-                          </button>
+                          <Link to={`/${item.id}`}>
+                            <button className="btn btn-outline-secondary">
+                              Открыть
+                            </button>
+                          </Link>
                           <button className="btn btn-secondary">
                             В избранное
                           </button>
