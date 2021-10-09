@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const MainContainer = () => {
+const MainContainer = ({ users }) => {
+  console.log(users);
   return (
     <div className="container">
       <div>
@@ -24,6 +26,9 @@ const MainContainer = () => {
       </div>
     </div>
   );
+};
+MainContainer.propTypes = {
+  users: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
 };
 
 export default MainContainer;
