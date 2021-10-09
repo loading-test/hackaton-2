@@ -1,0 +1,21 @@
+.about {
+  font-size: 14px;
+}
+
+.card-body a {
+  text-decoration: none;
+  padding-left: 2px;
+}
+
+.link-btn-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.main-text {
+  margin-left: 1em;
+  margin-top: 1em;
+}

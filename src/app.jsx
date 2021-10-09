@@ -1,9 +1,10 @@
 import React from "react";
+import "./app.css";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Favorites from "./components/favorites/favorites";
 import Main from "./content/main";
 import NavBar from "./content/navBar";
-import UserPage from "./content/userPage";
+import UserList from "./components/userList";
 
 const App = () => {
   return (
@@ -11,7 +12,7 @@ const App = () => {
       <NavBar />
       <Switch>
         <Route path="/" exact component={Main} />
-        <Route path="/users" component={UserPage} />
+        <Route path="/:userId?" component={UserList} />
         <Route path="/favorites" component={Favorites} />
         <Redirect to="/" />
       </Switch>
