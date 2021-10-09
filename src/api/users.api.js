@@ -50,13 +50,20 @@ const users = [
   },
 ];
 
-const fetchUsersAll = () => {
-  new Promise((resolve) => {
+// const fetchAll = () =>
+//   new Promise((resolve) => {
+//     window.setTimeout(function () {
+//       resolve(users);
+//     }, 2000);
+//   });
+
+const fetchUsersAll = () => 
+  new Promise(function(resolve) {
     window.setInterval(() => {
       resolve(users);
     }, 2000);
   });
-};
+
 
 const getById = (id) => {
   new Promise((resolve) => {
