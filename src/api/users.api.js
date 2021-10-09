@@ -50,21 +50,20 @@ const users = [
   },
 ];
 
-const fetchUsersAll = () => {
-  new Promise((resolve) => {
+const fetchUsersAll = () => 
+  new Promise(function(resolve) {
     window.setInterval(() => {
       resolve(users);
     }, 2000);
   });
-};
 
-const getById = (id) => {
+
+const getById = (id) => 
   new Promise((resolve) => {
     window.setInterval(() => {
       resolve(users.filter((user) => user.id === id));
     }, 1000);
   });
-};
 
 export default {
   fetchUsersAll,
