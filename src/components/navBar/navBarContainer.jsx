@@ -7,7 +7,7 @@ const NavBarContainer = () => {
       <ul className="nav nav-pills">
         <li>
           <Link to="/" className="nav-link">
-            Пользователи
+            Главная
           </Link>
         </li>
         <li>

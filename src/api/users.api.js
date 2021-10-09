@@ -39,7 +39,10 @@ const users = [
     src: "./img/115344820161227.jpg",
     skills: [skills.html, skills.css, skills.javaScript, skills.bootstrap],
     aboutMe:
-      "Всем привет! Очень люблю программирование, а именно JavaScript. В программировании мне нравится результат. В данный момент обучаюсь у Владилена Минина."
+      "Всем привет! Очень люблю программирование, а именно JavaScript. В программировании мне нравится результат. В данный момент обучаюсь у Владилена Минина.",
+    socialNetwork: "https://github.com/loading-test",
+    session:
+      "В данном проекте занимался api, компонентом карточки, маршрутизации и главной страницы сайта"
   },
   {
     id: "5e95e4f4a8e44441a3dd1f339d2d6238",
@@ -59,6 +62,7 @@ const users = [
     src: "./img/115344820161227.jpg",
     aboutMe:
       "Всем привет! Очень люблю программирование, а именно JavaScript. В программировании мне нравится результат. В данный момент обучаюсь у Владилена Минина.",
+    socialNetwork: "https://github.com/loading-test",
     session:
       "В данном проекте занимался api, компонентом карточки, маршрутизации и главной страницы сайта"
   },
@@ -69,6 +73,7 @@ const users = [
     src: "./img/115344820161227.jpg",
     aboutMe:
       "Всем привет! Очень люблю программирование, а именно JavaScript. В программировании мне нравится результат. В данный момент обучаюсь у Владилена Минина.",
+    socialNetwork: "https://github.com/loading-test",
     session:
       "В данном проекте занимался api, компонентом карточки, маршрутизации и главной страницы сайта"
   },
@@ -79,6 +84,7 @@ const users = [
     src: "./img/115344820161227.jpg",
     aboutMe:
       "Всем привет! Очень люблю программирование, а именно JavaScript. В программировании мне нравится результат. В данный момент обучаюсь у Владилена Минина.",
+    socialNetwork: "https://github.com/loading-test",
     session:
       "В данном проекте занимался api, компонентом карточки, маршрутизации и главной страницы сайта"
   }
@@ -91,13 +97,12 @@ const fetchUsersAll = () =>
     }, 2000);
   });
 
-const getById = (id) => {
+const getById = (id) =>
   new Promise((resolve) => {
-    window.setInterval(() => {
-      resolve(users.filter((user) => user.id === id));
+    window.setInterval(function () {
+      resolve(users.find((user) => user.id === id));
     }, 1000);
   });
-};
 
 export default {
   fetchUsersAll,
