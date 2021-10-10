@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/hackaton-2/static/css/main.433336ae.chunk.css",
+    "main.js": "/hackaton-2/static/js/main.6a10824f.chunk.js",
+    "main.js.map": "/hackaton-2/static/js/main.6a10824f.chunk.js.map",
+    "runtime-main.js": "/hackaton-2/static/js/runtime-main.51f6611a.js",
+    "runtime-main.js.map": "/hackaton-2/static/js/runtime-main.51f6611a.js.map",
+    "static/css/2.0f1110e3.chunk.css": "/hackaton-2/static/css/2.0f1110e3.chunk.css",
+    "static/js/2.f04e9f5a.chunk.js": "/hackaton-2/static/js/2.f04e9f5a.chunk.js",
+    "static/js/2.f04e9f5a.chunk.js.map": "/hackaton-2/static/js/2.f04e9f5a.chunk.js.map",
+    "static/js/3.14c1d562.chunk.js": "/hackaton-2/static/js/3.14c1d562.chunk.js",
+    "static/js/3.14c1d562.chunk.js.map": "/hackaton-2/static/js/3.14c1d562.chunk.js.map",
+    "index.html": "/hackaton-2/index.html",
+    "static/css/2.0f1110e3.chunk.css.map": "/hackaton-2/static/css/2.0f1110e3.chunk.css.map",
+    "static/css/main.433336ae.chunk.css.map": "/hackaton-2/static/css/main.433336ae.chunk.css.map",
+    "static/js/2.f04e9f5a.chunk.js.LICENSE.txt": "/hackaton-2/static/js/2.f04e9f5a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.51f6611a.js",
+    "static/css/2.0f1110e3.chunk.css",
+    "static/js/2.f04e9f5a.chunk.js",
+    "static/css/main.433336ae.chunk.css",
+    "static/js/main.6a10824f.chunk.js"
+  ]
+}
