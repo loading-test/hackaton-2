@@ -9,7 +9,7 @@ const MainContainer = ({ users }) => {
     return (
       <>
         <div className="main-text">
-          <p>Text....</p>
+          <p>Text...</p>
         </div>
         <div className="container">
           <div className="row">
