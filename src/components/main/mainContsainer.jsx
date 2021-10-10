@@ -6,7 +6,6 @@ import Preloader from "../../utils/preloader";
 import { Link } from "react-router-dom";
 
 const MainContainer = ({ users }) => {
-
   const favoritTogle = (id) => {
     if (!localStorage.getItem("favoritUsers")) {
       localStorage.setItem("favoritUsers", JSON.stringify([]));
@@ -14,17 +13,24 @@ const MainContainer = ({ users }) => {
     const favoritArray = JSON.parse(localStorage.getItem("favoritUsers"));
 
     if (!favoritArray.includes(id)) {
-      favoritArray.push(id)
-      localStorage.setItem("favoritUsers", JSON.stringify(favoritArray))
+      favoritArray.push(id);
+      localStorage.setItem("favoritUsers", JSON.stringify(favoritArray));
     } else {
-      localStorage.setItem("favoritUsers", JSON.stringify(favoritArray.filter((localId) => localId != id)))
+      localStorage.setItem(
+        "favoritUsers",
+        JSON.stringify(favoritArray.filter((localId) => localId != id))
+      );
     }
-  }
+  };
   if (users) {
     return (
       <>
         <div className="main-text">
-          <p>Text...</p>
+          <p>
+            Практикум помогает людям расти — на работе и в жизни. Мы освоим
+            новую специальность, заговорим на иностранном языке и будем получать
+            удовольствие от того, чем занимаемся — каждый день.
+          </p>
         </div>
         <div className="container">
           <div className="row">
@@ -49,7 +55,10 @@ const MainContainer = ({ users }) => {
                               Открыть
                             </button>
                           </Link>
-                          <button className="btn btn-secondary" onClick={() => favoritTogle(item.id)}>
+                          <button
+                            className="btn btn-secondary"
+                            onClick={() => favoritTogle(item.id)}
+                          >
                             В избранное
                           </button>
                         </div>
