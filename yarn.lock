@@ -2902,6 +2902,11 @@
   "resolved" "https://registry.npmjs.org/bootstrap/-/bootstrap-5.1.2.tgz"
   "version" "5.1.2"
 
+"bootswatch@^5.1.2":
+  "integrity" "sha512-ibg1i79ph0lgcYaWf6TzNKiQoVbIQlJlyFFb7dF9s3sjfB/WXT3vxLV+5vMJekdeEd5Vn9r5zhJZo3IrRjMPOg=="
+  "resolved" "https://registry.npmjs.org/bootswatch/-/bootswatch-5.1.2.tgz"
+  "version" "5.1.2"
+
 "brace-expansion@^1.1.7":
   "integrity" "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA=="
   "resolved" "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz"

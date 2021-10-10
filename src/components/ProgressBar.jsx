@@ -1,51 +1,66 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const ProgressBar = ({ color, languageName, bgcolor, languageLevel, height }) => {
+const ProgressBar = ({ languageName, languageLevel, color }) => {
   const Parentdiv = {
-    height: height,
-    float: "right",
-    width: "90%",
+    height: "30px",
+    width: "500px",
     backgroundColor: "whitesmoke",
     borderRadius: 40,
     margin: 20
   };
 
   const Childdiv = {
+    display: "flex",
     height: "100%",
     width: `${languageLevel}%`,
-    backgroundColor: bgcolor,
     borderRadius: 40,
     textAlign: "right"
   };
 
+  const ChilddivClassName = `${"bg-" + color}`;
+
   const progresstext = {
-    padding: 5,
-    display:"flex",
-    margin: "auto",
+    marginTop: "auto",
+    marginBottom: "auto",
+    display: "flex",
     textIndent: 10,
     color: "black",
     fontWeight: 900
   };
 
   return (
-    <div>
-      <h2
-        style={{
-          color: color,
-          float: "left",
-          lineHeight: "30px",
-          marginRight: "10px"
-        }}
-      >
-        {languageName}
-      </h2>
-      <div style={Parentdiv}>
-        <div style={Childdiv}>
-          <span style={progresstext}>{`${languageLevel}%`}</span>
-        </div>
-      </div>
-    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <h2
+              className={"text-" + color}
+              style={{
+                lineHeight: "30px",
+                marginRight: "10px"
+              }}
+            >
+              {languageName}
+            </h2>
+          </td>
+          <td>
+            <div style={Parentdiv}>
+              <div style={Childdiv} className={ChilddivClassName}>
+                <div style={progresstext}>{`${languageLevel}%`}</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   );
+};
+
+ProgressBar.propTypes = {
+  color: PropTypes.string.isRequired,
+  languageName: PropTypes.string.isRequired,
+  languageLevel: PropTypes.string.isRequired
 };
 
 export default ProgressBar;

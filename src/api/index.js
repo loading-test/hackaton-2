@@ -1,7 +1,9 @@
 import users from "./users.api";
+import skills from "./users.api";
 
 const API = {
-  users
+  users,
+  skills
 };
 
 export default API;

@@ -26,18 +26,23 @@ const skills = {
   },
   materialUi: {
     id: "52e396ef8157491f974f51d0c7865d2a",
-    name: "Bootstrap",
+    name: "MaterialUi",
     color: "info"
   }
 };
 
 const users = [
   {
-    id: "17179c839e22461792004f317fdc1743",
+    id: "3",
     name: "Адель Абсалямов",
     age: "33",
     src: "./img/115344820161227.jpg",
-    skills: [skills.html, skills.css, skills.javaScript, skills.bootstrap],
+    skills: [
+      (skills.html = addLevel(skills.html, 64)),
+      (skills.css = addLevel(skills.css, 58)),
+      (skills.javaScript = addLevel(skills.javaScript, 45)),
+      (skills.bootstrap = addLevel(skills.bootstrap, 56))
+    ],
     aboutMe:
       "Всем привет! Очень люблю программирование, а именно JavaScript. В программировании мне нравится результат. В данный момент обучаюсь у Владилена Минина.",
     socialNetwork: "https://github.com/loading-test",
@@ -49,6 +54,12 @@ const users = [
     name: "Сергей Матвейчук",
     age: "55",
     src: "./img/115344820161227.jpg",
+    skills: [
+      (skills.html = addLevel(skills.html, 55)),
+      (skills.css = addLevel(skills.css, 67)),
+      (skills.javaScript = addLevel(skills.javaScript, 34)),
+      (skills.bootstrap = addLevel(skills.bootstrap, 77))
+    ],
     aboutMe:
       "Всем привет! Очень люблю программирование, а именно JavaScript. В программировании мне нравится результат. В данный момент обучаюсь у Владилена Минина.",
     socialNetwork: "https://github.com/Sergei2010",
@@ -60,6 +71,12 @@ const users = [
     name: "Дмитрий Братищев",
     age: "38",
     src: "./img/115344820161227.jpg",
+    skills: [
+      (skills.html = addLevel(skills.html, 34)),
+      (skills.css = addLevel(skills.css, 45)),
+      (skills.javaScript = addLevel(skills.javaScript, 55)),
+      (skills.bootstrap = addLevel(skills.bootstrap, 48))
+    ],
     aboutMe:
       "Всем привет! Очень люблю программирование, а именно JavaScript. В программировании мне нравится результат. В данный момент обучаюсь у Владилена Минина.",
     socialNetwork: "https://github.com/DmitryBratishchev",
@@ -71,6 +88,12 @@ const users = [
     name: "Иван Иванов",
     age: "23",
     src: "./img/115344820161227.jpg",
+    skills: [
+      (skills.html = addLevel(skills.html, 44)),
+      (skills.css = addLevel(skills.css, 57)),
+      (skills.javaScript = addLevel(skills.javaScript, 34)),
+      (skills.bootstrap = addLevel(skills.bootstrap, 42))
+    ],
     aboutMe:
       "Люблю путешествовать, узнавать что то новое. Много читаю книг, а так же учусь и работаю. Работаю официантом в ресторане. учеба это JavaScript",
     socialNetwork: "https://github.com/ivan",
@@ -81,6 +104,12 @@ const users = [
     name: "Артур Исмаев",
     age: "29",
     src: "./img/115344820161227.jpg",
+    skills: [
+      (skills.html = addLevel(skills.html, 33)),
+      (skills.css = addLevel(skills.css, 49)),
+      (skills.javaScript = addLevel(skills.javaScript, 56)),
+      (skills.bootstrap = addLevel(skills.bootstrap, 47))
+    ],
     aboutMe:
       "В программировании совсем недавно. Это мой первый опыт в хакатоне. Пока работаю водителем, но в дальнейшем планирую перейти в разработку",
     socialNetwork: "https://github.com/artur",
@@ -95,14 +124,35 @@ const fetchUsersAll = () =>
     }, 2000);
   });
 
-const getById = (id) =>
+const fetchSkillsAll = () =>
+  new Promise(function (resolve) {
+    window.setInterval(() => {
+      resolve(skills);
+    }, 2000);
+  });
+
+const getUserById = (id) =>
   new Promise((resolve) => {
     window.setInterval(function () {
       resolve(users.find((user) => user.id === id));
     }, 1000);
   });
 
+const getSkillById = (id) =>
+  new Promise((resolve) => {
+    window.setInterval(function () {
+      resolve(users.find((user) => user.id === id));
+    }, 1000);
+  });
+
+function addLevel(Obj, level) {
+  Obj = Object.assign(Obj, { languageLevel: level });
+  return Obj;
+}
+
 export default {
   fetchUsersAll,
-  getById
+  fetchSkillsAll,
+  getUserById,
+  getSkillById
 };
