@@ -2,10 +2,10 @@ import React from "react";
 import { RadialProgress } from "react-radial-progress-indicator";
 
 const RadialProgressBar = ({
-  color,
-  languageName,
-  ringFgColour,
-  languageLevel
+  color="red",
+  languageName="HTML",
+  ringFgColour="red",
+  languageLevel="42"
 }) => {
   return (
     <div>

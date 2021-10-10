@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavBarContainer = () => {
   return (
-    <header className="d-flex justify-content-center py-3 shadow">
+    <header className="d-flex justify-content-center py-3 shadow mb-4">
       <ul className="nav nav-pills">
         <li>
           <Link to="/" className="nav-link">

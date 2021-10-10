@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import "./mainContainer.css";
 import Preloader from "../../utils/preloader";
 
@@ -27,9 +28,11 @@ const MainContainer = ({ users }) => {
                         <p className="card-text">{`${item.age} года`}</p>
                         <p className="about">{item.aboutMe}</p>
                         <div className="link-btn-card">
-                          <button className="btn btn-outline-secondary">
-                            Открыть
-                          </button>
+                          <Link to={item.id}>
+                            <button className="btn btn-outline-secondary">
+                              Открыть
+                            </button>
+                          </Link>
                           <button className="btn btn-secondary">
                             В избранное
                           </button>
