@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hackaton-2/static/css/main.433336ae.chunk.css",
-    "main.js": "/hackaton-2/static/js/main.6a10824f.chunk.js",
-    "main.js.map": "/hackaton-2/static/js/main.6a10824f.chunk.js.map",
+    "main.js": "/hackaton-2/static/js/main.ec3f9cd9.chunk.js",
+    "main.js.map": "/hackaton-2/static/js/main.ec3f9cd9.chunk.js.map",
     "runtime-main.js": "/hackaton-2/static/js/runtime-main.51f6611a.js",
     "runtime-main.js.map": "/hackaton-2/static/js/runtime-main.51f6611a.js.map",
     "static/css/2.0f1110e3.chunk.css": "/hackaton-2/static/css/2.0f1110e3.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.0f1110e3.chunk.css",
     "static/js/2.f04e9f5a.chunk.js",
     "static/css/main.433336ae.chunk.css",
-    "static/js/main.6a10824f.chunk.js"
+    "static/js/main.ec3f9cd9.chunk.js"
   ]
 }
