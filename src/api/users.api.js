@@ -90,7 +90,6 @@ const users = [
   }
 ];
 
-
 const fetchUsersAll = () =>
   new Promise(function (resolve) {
     window.setInterval(() => {
