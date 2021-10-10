@@ -5,6 +5,20 @@ import Preloader from "../../utils/preloader";
 import { Link } from "react-router-dom";
 
 const MainContainer = ({ users }) => {
+
+  const favoritTogle = (id) => {
+    if (!localStorage.getItem("favoritUsers")) {
+      localStorage.setItem("favoritUsers", JSON.stringify([]));
+    }
+    const favoritArray = JSON.parse(localStorage.getItem("favoritUsers"));
+
+    if (!favoritArray.includes(id)) {
+      favoritArray.push(id)
+      localStorage.setItem("favoritUsers", JSON.stringify(favoritArray))
+    } else {
+      localStorage.setItem("favoritUsers", JSON.stringify(favoritArray.filter((localId) => localId != id)))
+    }
+  }
   if (users) {
     return (
       <>
@@ -34,7 +48,7 @@ const MainContainer = ({ users }) => {
                               Открыть
                             </button>
                           </Link>
-                          <button className="btn btn-secondary">
+                          <button className="btn btn-secondary" onClick={() => favoritTogle(item.id)}>
                             В избранное
                           </button>
                         </div>
